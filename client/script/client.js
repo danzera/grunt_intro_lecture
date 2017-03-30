@@ -9,7 +9,7 @@ function init(){
 
 function eventListeners(value){
   if(value){
-    $(".submitEmployee").on("click", clickSubmit);
+    $(".submitEmployee").on("submit", clickSubmit);
     $(".employeeContainer").on("click", ".delete-btn", clickDelete);
     $(".employeeContainer").on("click", ".update-btn", clickUpdate);
   } else {
