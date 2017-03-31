@@ -14,6 +14,18 @@ module.exports = function(grunt){
         src: ["jquery.js"],
         dest: "server/public/vendors/"
       },
+      bootstrap: {
+        expand: true,
+        cwd: "node_modules/bootstrap/dist/css/",
+        src: ["bootstrap.css"],
+        dest: "server/public/styles/"
+      },
+      customStyles: {
+        expand: true,
+        cwd: "client/styles/",
+        src: ["style.css"],
+        dest: "server/public/styles/"
+      },
       html: {
         expand: true,
         cwd: "client/views/",
@@ -22,7 +34,7 @@ module.exports = function(grunt){
       }
     },
     watch: {
-      files: ["client/script/*.js", "client/views/*.html"],
+      files: ["client/script/*.js", "client/styles/*.css", "client/views/*.html"],
       tasks: ['uglify', 'copy']
     }
   });
